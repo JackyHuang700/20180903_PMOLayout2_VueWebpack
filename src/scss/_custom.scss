@@ -1,0 +1,70 @@
+// Here you can add other styles
+.dropdown-menuStyle{
+  // border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  // border: 2px solid red !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+
+ 
+}
+
+.dropdown-item{
+  transition: background-color .3s ease-in-out;
+}
+// .dropdown-menu{
+//   opacity: 0;
+//   transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+//   visibility: hidden;
+  
+// }
+
+// .dropdown-menu.show{
+//   visibility:visible ; 
+//   opacity: 1;
+// }
+
+.dropdownStyle.dropdownStyle{
+  display: inline-block;
+  margin-right: 20px;
+
+  .nav-link{
+transition-property: transform;
+transition-duration: .3s;
+transition-timing-function: ease-in-out;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.sidebar .nav-dropdown.open.open{
+&>a{
+  transition-property: border-left, background-color;
+transition-duration: .3s;
+transition-timing-function: ease-in-out;
+}
+  
+  &.open.open{
+    &>a{
+      border-left: 3px solid red;
+    }
+  }
+
+ 
+}
+
+.nav-link, .nav-icon{
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+
+// .quickAccessArea{
+//   li{
+//     &:hover{
+//     }
+//   }
+// }
