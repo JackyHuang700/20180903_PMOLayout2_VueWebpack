@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box !important;
+}
+
 .text-center{
   text-align: center !important;
 }
@@ -7,7 +11,8 @@
 }
 
 .dropdown-header{
-  background-color: #e4e7ea;
+  background-color: #eee;
+  // background-color: #e4e7ea;
   // border: 1px solid #c8ced3;
   color: #73818f;
   white-space: nowrap;
@@ -36,7 +41,7 @@
 }
 
 .navbar-custom-menu>.navbar-nav>li>.dropdown-menu{
-  right: 21px;
+  right: 30px;
   top: 40px;
 }
 
@@ -59,7 +64,7 @@
 }
 
 .navbar-nav>.user-menu>.dropdown-menu{
-  width: 220px;
+  width: 280px;
   border-radius: 10px;
   border: none;
 }
@@ -82,6 +87,7 @@ li{
 
 &>li.user-header{
   height: 100%;
+  width: 100%;
   background-color: rgb(238, 238, 238);
   display: inline-block;
   padding: 4px 5px;
@@ -118,11 +124,80 @@ text-align: left;
 
 
 .iconAnim{
-  transition-property: transform;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
+  transition-property: background-color;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
+
 
   &:hover{
+    
+    i, span{
+      transition-property: transform;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
     transform: translateY(-5px);
+  }
+  }
+}
+
+.sidebar-menu.sidebar-menu>li:hover>a{
+  border-left: 2px solid #00c0ef;
+// .sidebar-menu.sidebar-menu>li>a{
+  transition-property: background-color, color, border;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* 子選單 */
+.skin-blue .sidebar-menu .treeview-menu>li>a:hover{
+  border-left: 2px solid #00c0ef;
+
+
+transition-property: color, border;
+transition-duration: .3s;
+transition-timing-function: ease-in-out;
+
+}
+
+
+.skin-blue .main-header .navbar,
+  .skin-blue .main-header .logo{
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+  background-color: #fff;
+  border-bottom: 1px solid #c8ced3;
+}
+
+.skin-blue .main-header .navbar .nav>li>a,
+.skin-blue .main-header .navbar .sidebar-toggle{
+  color: #73818f;
+}
+
+.skin-blue .main-header .navbar .nav>li>a:hover{
+  background-color: transparent;
+  color: #120000;
+  // background-color: rgb(220, 220, 220);
+}
+
+.skin-blue .main-header .logo:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+// .skin-blue .main-header .navbar .sidebar-toggle{
+//   transition-property: background-color;
+//   transition-timing-function: ease-in-out;
+//   transition-duration: .3s;
+// }
+.skin-blue .main-header .navbar .sidebar-toggle{
+transition-duration: .3s;
+transition-timing-function: ease-in-out;
+transition-property: transform;
+
+  &:hover{
+    background-color: transparent;
+    // background-color: rgb(220, 220, 220);
+    color: #120000;
+    transform: scale(1.3);
   }
 }
