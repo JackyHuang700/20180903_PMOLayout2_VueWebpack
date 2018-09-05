@@ -175,7 +175,7 @@
 }
 
 .skin-blue .main-header .logo:hover {
-  background-color: gainsboro;
+  background-color: transparent;
 }
 
 .skin-blue .main-header .navbar .sidebar-toggle {
@@ -191,5 +191,15 @@
   color: #120000;
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
+}
+
+.logoImg {
+  width: 89px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
