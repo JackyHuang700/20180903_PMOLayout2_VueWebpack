@@ -116,14 +116,14 @@
 
 .formRow label {
   float: left;
-  width: 78%;
+  width: 50%;
   text-align: left;
   font-size: 16px;
   margin-bottom: 5px;
 }
 
 .formRow a {
-  width: 22%;
+  width: 50%;
   float: left;
   text-align: right;
 }
