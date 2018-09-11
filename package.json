@@ -46,6 +46,7 @@
     "build-vendors": "node build/vendors.js",
     "css": "npm-run-all --parallel css-compile* --sequential css-prefix css-minify*",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss src/css/style.css",
+    "css-compile2": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/login.scss src/css/login.css",
     "css-compile-vendors": "node build/vendors-sass.js",
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"src/scss/**/*.scss\"",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output src/css/style.min.css src/css/style.css",
