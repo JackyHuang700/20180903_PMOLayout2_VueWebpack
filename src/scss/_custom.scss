@@ -214,3 +214,15 @@
 .main-footer {
   border-color: transparent;
 }
+
+
+.skin-blue .main-sidebar,
+.skin-blue .sidebar-menu > li:hover > a {
+    background-color: #324359;
+}
+
+.skin-blue .sidebar-menu > li.header,
+.skin-blue .sidebar-menu > li > .treeview-menu,
+.skin-blue .sidebar-menu > li.menu-open > a {
+    background-color: #29384b;
+}

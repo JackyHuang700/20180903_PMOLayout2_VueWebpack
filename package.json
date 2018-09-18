@@ -48,6 +48,7 @@
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss src/css/style.css",
     "css-compile2": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/login.scss src/css/login.css",
     "css-compile3": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/dragula.scss src/css/dragula.css",
+    "css-compile4": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/test.scss src/css/test.css",
     "css-compile-vendors": "node build/vendors-sass.js",
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"src/scss/**/*.scss\"",
     "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output src/css/style.min.css src/css/style.css",

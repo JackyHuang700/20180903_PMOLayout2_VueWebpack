@@ -14,8 +14,8 @@
 #dragulaContainer {
   width: 100%;
   height: 40%;
-  border: 1px solid black;
   display: block;
+  padding: 30px 20px 0px 20px;
 }
 
 .list,
@@ -25,6 +25,7 @@
   height: 100%;
   display: inline-block;
   vertical-align: top;
+  margin-right: 4px;
 }
 
 .list .column,
@@ -74,19 +75,66 @@
   background-color: rgba(9, 45, 66, 0.13);
 }
 
-.list .column .item:first-child,
-#addListButton .column .item:first-child {
+.list .column .item,
+#addListButton .column .item {
+  margin-top: 5px;
+  padding: 2px 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+}
+
+.list .column .item:first-of-type,
+#addListButton .column .item:first-of-type {
   margin-top: 10px;
 }
 
-.list .column .item:last-child,
-#addListButton .column .item:last-child {
+.list .column .item:last-of-type,
+#addListButton .column .item:last-of-type {
   margin-bottom: 30px;
 }
 
 .list .column .item .item-title,
 #addListButton .column .item .item-title {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.list .column .item .itemContent,
+#addListButton .column .item .itemContent {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.list .column .item .itemContent .itemContentName,
+.list .column .item .itemContent .itemContentDate,
+#addListButton .column .item .itemContent .itemContentName,
+#addListButton .column .item .itemContent .itemContentDate {
+  height: auto;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.list .column .item .itemContent .itemContentName,
+#addListButton .column .item .itemContent .itemContentName {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 2px;
+}
+
+.list .column .item .itemContent .itemContentDate,
+#addListButton .column .item .itemContent .itemContentDate {
+  margin: 0;
+}
+
+.list .column .item .itemContent .itemContentIcon,
+#addListButton .column .item .itemContent .itemContentIcon {
+  height: auto;
+  width: 100%;
+  display: block;
+  text-align: right;
 }
 
 .list .column .addListBtn,
@@ -99,9 +147,16 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  background-color: transparent;
   transition-property: background-color, color;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  text-align: left;
+}
+
+.list .column .addListBtn i,
+#addListButton .column .addListBtn i {
+  margin-right: 5px;
 }
 
 .list .column .addListBtn:hover,
@@ -209,13 +264,5 @@
 
 #addListButton:hover {
   background-color: #005586;
-}
-
-.item {
-  margin-top: 5px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
 }
 /*# sourceMappingURL=dragula.css.map */

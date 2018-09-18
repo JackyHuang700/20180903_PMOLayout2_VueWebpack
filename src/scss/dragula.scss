@@ -4,20 +4,6 @@
   box-sizing: border-box;
 }
 
-// html,
-// body {
-// width: 100%;
-// height: 100%;
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// flex: {
-// direction: row;
-// wrap: wrap;
-// }
-// background-color: #0079bf;
-// }
-
 .body {
   background-color: #0079bf;
   height: 100%;
@@ -28,8 +14,9 @@
 #dragulaContainer {
   width: 100%;
   height: 40%;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: block;
+  padding: 30px 20px 0px 20px;
 }
 
 .list,
@@ -40,6 +27,7 @@
   height: 100%;
   display: inline-block;
   vertical-align: top;
+  margin-right: 4px;
   // border: 1px solid red;
 
   .column {
@@ -89,16 +77,59 @@
     }
 
     .item {
-      &:first-child {
+      margin-top: 5px;
+      padding: 2px 8px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      border-radius: 4px;
+      // border: 1px solid red;
+
+      &:first-of-type {
         margin-top: 10px;
+        // border: 1px solid blue;
       }
 
-      &:last-child {
+      &:last-of-type {
         margin-bottom: 30px;
+        // border: 1px solid red;
       }
 
       .item-title {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .itemContent {
+        // border: 1px solid red;
+        height: 100%;
+        width: 100%;
+        display: block;
+
+        .itemContentName,
+        .itemContentDate {
+          height: auto;
+          display: block;
+          // border: 1px solid red;
+          width: 100%;
+          text-align: left;
+        }
+
+        .itemContentName {
+          font-weight: 600;
+          font-size: 18px;
+          padding-bottom: 2px;
+        }
+
+        .itemContentDate {
+          margin: 0;
+        }
+        .itemContentIcon {
+          // border: 1px solid red;
+          height: auto;
+          width: 100%;
+          display: block;
+          text-align: right;
+        }
       }
     }
 
@@ -112,9 +143,14 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      background-color: transparent;
       transition-property: background-color, color;
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
+      text-align: left;
+      i {
+        margin-right: 5px;
+      }
 
       &:hover {
         background-color: rgba(9, 45, 66, 0.13);
@@ -139,7 +175,7 @@
       background-color: #fff;
       border-radius: 5px;
       overflow: hidden;
-      box-shadow: 3px 4px 20px rgba(0, 0, 0, .5);
+      box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.5);
 
       > * {
         background-color: #fff;
@@ -177,7 +213,6 @@
           font-size: 22px;
           color: #606f77;
           // border: 1px solid red;
-          
         }
       }
 
@@ -185,9 +220,8 @@
         width: 100%;
         height: $columnAreaHeight - $columnAreaHeaderHeight;
 
-        ul{
-          li{
-
+        ul {
+          li {
             cursor: pointer;
             display: block;
             padding: 6px 12px;
@@ -196,7 +230,7 @@
             color: #17394d;
             background-color: transparent;
 
-            &:hover{
+            &:hover {
               background-color: #298fca;
               color: #fff;
             }
@@ -226,14 +260,4 @@
   &:hover {
     background-color: #005586;
   }
-}
-
-.item {
-  margin: {
-    top: 5px;
-  }
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
 }

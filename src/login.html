@@ -25,7 +25,7 @@
         <a class="systemLogo" href="" target="_black">
           <img src="./img/brand/PMOLogo.png" alt="">
         </a>
-        <header class="systemChin colorStyle2">mTerrace PMO系統</header>
+        <header class="systemChin colorStyle2">Project Management Office</header>
         <div class="systemEng colorStyle">mTerrace PMO</div>
         <footer class="companyInfo colorStyle">Copyright © 2018 mTerrace, Inc.</footer>
       </section>
@@ -41,7 +41,8 @@
           <input type="password" id="password" class="borderStyle" placeholder="請輸入密碼" />
           <span class="far fa-eye inputIcon" id="changeIputMode"></span>
         </div>
-        <button type="submit" class="bgcStyle">登入</button>
+        <!-- <button type="submit" class="bgcStyle">登入</button> -->
+        <button type="button" class="bgcStyle">登入</button>
       </section>
     </form>
   </div>
@@ -63,6 +64,12 @@
           self.classList.remove(faEyeStr)
           self.classList.add(faEyeSlashStr)
         }
+      })
+    })()
+    ; (function(){
+      var submitDom = document.getElementsByClassName('bgcStyle')[0]
+      submitDom.addEventListener('click', function(e){
+        location.href = 'index.html'
       })
     })()
   </script>

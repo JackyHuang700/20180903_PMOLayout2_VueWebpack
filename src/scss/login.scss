@@ -9,7 +9,7 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: rgba(23, 119, 203, .2);
+  background-color: rgba(23, 119, 203, 0.2);
 }
 
 .centerAndCenter {
@@ -23,7 +23,8 @@
   width: 50%;
   max-width: 1000px;
   border-radius: 10px;
-  box-shadow: 0px 0px 21px 6px rgba(0,0,0,.3)
+  box-shadow: 0px 0px 21px 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(23, 119, 203, 0.2);
 }
 
 /* left */
@@ -35,7 +36,9 @@
   text-align: left;
   padding: 20px 25px;
   position: relative;
-  background: #f9fafe url(../assets/Component10/bg_sso_purple.png) center center
+  // background: #f9fafe url(../img/bg_sso_purple.png) center center
+  //   no-repeat;
+  background: #f9fafe center center
     no-repeat;
   background-size: 100% 100%;
 }
@@ -72,7 +75,7 @@
   text-align: center;
 }
 
-.logo .systemChin:before,
+// .logo .systemChin:before,
 .logo .companyInfo:before {
   display: inline-block;
   content: '';
@@ -132,6 +135,7 @@ $formRowLeft: 50%;
 .formRowLabelHeight {
   height: 22px;
   line-height: 22px;
+  font-size: 10px;
 }
 
 .formRow input {
@@ -165,7 +169,8 @@ $formRowLeft: 50%;
   z-index: 1;
 }
 
-.loginForm button[type='submit'] {
+.loginForm button[type='submit'],
+.loginForm button[type='button'] {
   margin-top: 25px;
   width: 100%;
   padding: 15px 0;
@@ -208,7 +213,8 @@ $formRowLeft: 50%;
   .formRow input {
     font-size: 15px;
   }
-  .loginForm button[type='submit'] {
+  .loginForm button[type='submit'],
+  .loginForm button[type='button'] {
     font-size: 16px;
   }
 }
@@ -231,10 +237,19 @@ $formRowLeft: 50%;
   .formRow input {
     font-size: 12px;
   }
-  .loginForm button[type='submit'] {
+  .loginForm button[type='submit'],
+  .loginForm button[type='button'] {
     font-size: 13px;
   }
+
+  .logo .systemChin {
+    height: 15%;
+  }
+  .logo .systemEng {
+    height: 66%;
+  }
 }
+
 
 @media only screen and (max-width: 767px) {
   .loginForm {

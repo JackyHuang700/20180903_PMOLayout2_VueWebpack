@@ -193,20 +193,56 @@
           <div id="dragulaContainer">
             <div class="list">
               <div class="column">
-                <h1 class="title">
-                  <span>To Do</span>
-                  <i class="fas fa-ellipsis-h columnAreaBtn"></i>
+                <h1 class="title notMove">
+                  <span class="notMove">To Do</span>
+                  <i class="fas fa-ellipsis-h columnAreaBtn notMove"></i>
                 </h1>
-                <div class="item">
+                <section class="item">
                   <h2 class="item-title">do the dishes</h2>
-                </div>
-                <div class="item">
+                  <div class="itemContent">
+                    <div class="itemContentName">子任務</div>
+                    <p class="itemContentDate">2018/7/1~2018/7/31</p>
+                    <div class="itemContentIcon">
+                      <i class="fas fa-cog"></i>
+                      <i class="fas fa-arrow-down"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </section>
+                <section class="item">
+                  <h2 class="item-title">do the dishes</h2>
+                  <div class="itemContent">
+                    <div class="itemContentName">子任務</div>
+                    <p class="itemContentDate">2018/7/1~2018/7/31</p>
+                    <div class="itemContentIcon">
+                      <i class="fas fa-cog"></i>
+                      <i class="fas fa-arrow-down"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </section>
+                <section class="item">
+                  <h2 class="item-title">do the dishes</h2>
+                  <div class="itemContent">
+                    <div class="itemContentName">子任務</div>
+                    <p class="itemContentDate">2018/7/1~2018/7/31</p>
+                    <div class="itemContentIcon">
+                      <i class="fas fa-cog"></i>
+                      <i class="fas fa-arrow-down"></i>
+                      <i class="far fa-trash-alt"></i>
+                    </div>
+                  </div>
+                </section>
+                <!-- <section class="item">
                   <h2 class="item-title">learn Angular 2</h2>
-                </div>
-                <div class="item">
+                </section>
+                <section class="item">
                   <h2 class="item-title">learn Angular 2</h2>
-                </div>
-                <button class="addListBtn list-dimension">Add a Card...</button>
+                </section> -->
+                <button class="addListBtn list-dimension">
+                  <i class="fas fa-plus"></i>
+                  Add a Card
+                </button>
 
 
                 <div class="columnArea">
@@ -231,6 +267,9 @@
             </div>
             <button type="button" id="addListButton">Add a list...</button>
           </div>
+
+
+
         </div>
       </section>
     </div>
@@ -280,9 +319,9 @@
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="js/pages/dashboard.js"></script>
+  <!-- <script src="js/pages/dashboard.js"></script> -->
   <!-- AdminLTE for demo purposes -->
-  <script src="js/demo.js"></script>
+  <!-- <script src="js/demo.js"></script> -->
   <!-- dragula -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
   <script>
@@ -291,7 +330,12 @@
       // register
       var d = dragula({
         moves: function (el, cont, handle) {
-          return handle.className !== 'title'
+          // console.log(el);
+          // console.log(cont);
+          // console.log(handle);
+          // debugger
+          // return handle.className !== 'title'
+          return !handle.contains('notMove')
         }
       })
       var cs = document.querySelectorAll('.column')
@@ -313,9 +357,9 @@
             // var columnDom = $(self.previousElementSibling)
             // debugger
             var str = (
-              '<div class="item">' +
+              '<section class="item">' +
               '  <h2 class="item-title">do the dishes</h2>' +
-              '</div>')
+              '</section>')
             columnDom.append(str)
 
             // 
@@ -362,24 +406,25 @@
       // https://codepen.io/dbeat999/pen/MwrLGp
       // https://codepen.io/sofiachardin/pen/yzYvze
       // https://codepen.io/jonohayon/pen/yOWOEy
+      // https://codepen.io/iamjamielobo/full/ybayQo/
     })()
 
   </script>
   <script>
-  (function(){
-   $('.columnAreaBtn').on('click', function(e){
-     var self = e.target
-     var columnDom = self.parentElement.parentElement
-    //  debugger
-     var columnAreaDom = columnDom.querySelector('.columnArea')
-     if (columnAreaDom.style.display === "none") {
-        columnAreaDom.style.display = "block";
-    } else {
-        columnAreaDom.style.display = "none";
-    }
-   })
-    
-  })()
+      (function () {
+        $('.columnAreaBtn').on('click', function (e) {
+          var self = e.target
+          var columnDom = self.parentElement.parentElement
+          //  debugger
+          var columnAreaDom = columnDom.querySelector('.columnArea')
+          if (columnAreaDom.style.display === "none") {
+            columnAreaDom.style.display = "block";
+          } else {
+            columnAreaDom.style.display = "none";
+          }
+        })
+
+      })()
   </script>
 </body>
 
