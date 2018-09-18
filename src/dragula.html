@@ -262,7 +262,7 @@
             </div>
             <div class="list">
               <div class="column">
-                <h1 class="title">Done</h1>
+                <h1 class="title notMove">Done</h1>
               </div>
             </div>
             <button type="button" id="addListButton">Add a list...</button>
@@ -327,73 +327,80 @@
   <script>
     (function () {
 
-     // register
-    var d = dragula({
-      moves: function (el, cont, handle) {
-        // console.log(el);
-        // console.log(cont);
-        // console.log(handle);
-        // debugger
-        // return handle.className !== 'title'
-        return !handle.contains('notMove')
-      }
-    })
-    var cs = document.querySelectorAll('.column')
-    for (var i in cs) {
-      d.containers.push(cs[i])
-    }
-
-    // add Card
-    var listDom = document.getElementsByClassName('list')
-    for (var index = 0; index < listDom.length; index++) {
-      var list = listDom[index]
-      var addListBtnDom = list.getElementsByClassName('addListBtn')[0]
-      // debugger
-      if (addListBtnDom) {
-        addListBtnDom.addEventListener('click', function (e) {
-          var self = e.target
-          var columnDom = $(self.parentElement)
-          // var columnDom = $(self.previousElementSibling)
+      // register
+      var d = dragula({
+        moves: function (el, cont, handle) {
+          // console.log(el);
+          // console.log(cont);
+          // console.log(handle);
           // debugger
-          var str = (
-            '<section class="item">' +
-              '  <h2 class="item-title">do the dishes</h2>' +
-              '</section>')
-          columnDom.append(str)
+          // return handle.className !== 'title'
+          // debugger
+          // console.log(!handle.contains('notMove'))
+          return !handle.classList.contains('notMove')
+        }
+      })
+      var cs = document.querySelectorAll('.column')
+      for (var i in cs) {
 
-          //
-          var itemLastDom = $(columnDom[0].querySelectorAll('.item')).last()
-          itemLastDom.focus()
-        })
+        d.containers.push(cs[i])
       }
-    }
 
-    // add Board
-    var dragulaContainerDom = document.getElementById('dragulaContainer')
+      // add Card
+      var listDom = document.getElementsByClassName('list')
+      for (var index = 0; index < listDom.length; index++) {
+        var list = listDom[index]
+        var addListBtnDom = list.getElementsByClassName('addListBtn')[0]
+        // debugger
+        if (addListBtnDom) {
+          addListBtnDom.addEventListener('click', function (e) {
+            var self = e.target
+            var columnDom = $(self.parentElement)
+            // var columnDom = $(self.previousElementSibling)
+            // debugger
+            var str = (
+              '<section class="item">' +
+              '  <h2 class="item-title">do the dishes</h2>' +
+              '  <div class="itemContent">' +
+              '    <div class="itemContentName">子任務</div>' +
+              '    <p class="itemContentDate">2018/7/1~2018/7/31</p>' +
+              '    <div class="itemContentIcon">' +
+              '      <i class="fas fa-cog"></i>' +
+              '      <i class="fas fa-arrow-down"></i>' +
+              '      <i class="far fa-trash-alt"></i>' +
+              '    </div>' +
+              '  </div>' +
+              '</section>')
+            columnDom.append(str)
 
-    document.getElementById('addListButton').addEventListener('click', function (e) {
-      var self = e.target
-      var str = (
-        '<section class="item">' +
-          '  <h2 class="item-title">do the dishes</h2>' +
-          '  <div class="itemContent">' +
-          '    <div class="itemContentName">子任務</div>' +
-          '    <p class="itemContentDate">2018/7/1~2018/7/31</p>' +
-          '    <div class="itemContentIcon">' +
-          '      <i class="fas fa-cog"></i>' +
-          '      <i class="fas fa-arrow-down"></i>' +
-          '      <i class="far fa-trash-alt"></i>' +
-          '    </div>' +
+            // 
+            var itemLastDom = $(columnDom[0].querySelectorAll('.item')).last();
+            itemLastDom.focus()
+          })
+        }
+
+      }
+
+      // add Board
+      var dragulaContainerDom = document.getElementById('dragulaContainer')
+
+      document.getElementById('addListButton').addEventListener('click', function (e) {
+        var self = e.target
+        var str = (
+          '<div class="list">' +
+          '  <div class="column">' +
+          '    <h1 class="title notMove">Done</h1>' +
           '  </div>' +
-          '</section>')
+          '</div>')
 
-      $(dragulaContainerDom).find('.list').last().after(str)
+        $(dragulaContainerDom).find('.list').last().after(str)
 
-      var columnList = document.querySelectorAll('.column')
-      var columnListLength = columnList.length
-      var lastColumnDom = columnList[columnListLength - 1]
-      d.containers.push(lastColumnDom)
-    })
+        var columnList = document.querySelectorAll('.column')
+        var columnListLength = columnList.length
+        var lastColumnDom = columnList[columnListLength - 1]
+        d.containers.push(lastColumnDom)
+      })
+
 
 
       // function registeDragula() {
