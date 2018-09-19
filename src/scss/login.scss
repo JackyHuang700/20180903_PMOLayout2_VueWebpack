@@ -63,7 +63,7 @@
   letter-spacing: 1.1px;
 }
 .logo .systemEng {
-  height: 75%;
+  height: 73%;
   width: 100%;
   font-size: 18px;
   letter-spacing: 1.1px;
@@ -241,22 +241,24 @@ $formRowLeft: 50%;
   .loginForm button[type='button'] {
     font-size: 13px;
   }
+}
 
-  .logo .systemChin {
-    height: 15%;
-  }
-  .logo .systemEng {
-    height: 66%;
+@media only screen and (max-width: 1023px){
+  .loginForm{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .loginForm {
     height: 100%;
     width: 100%;
     /* min-width: 360px; */
     position: relative;
+    margin: 0;
   }
 
   .logo {
@@ -281,6 +283,7 @@ $formRowLeft: 50%;
     float: right;
     width: 50%;
     height: 100%;
+    line-height: 50px;
     text-align: right;
     padding-right: 4%;
     font-size: 12px;
