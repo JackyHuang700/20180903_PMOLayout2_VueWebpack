@@ -40,7 +40,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link rel="stylesheet" href="css/test.css">
 
-  
+  <!-- jEasyUI -->
+  <link rel="stylesheet" href="bower_components/jeasyui/themes/material-teal/tabs.css">
+  <link rel="stylesheet" href="bower_components/jeasyui/themes/icon.css">
+  <!-- <link rel="stylesheet" href="bower_components/jeasyui/demo/demo.css"> -->
+<style>
+  .l-btn-text,
+.l-btn-icon{
+  width: 100px;
+  height: 33%;
+  display: block;
+}
+</style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -147,8 +158,39 @@
       <section class="content">
 
 
-      
-
+        <h2>Tabs Style</h2>
+        <p>Click the options below to change the tabs style.</p>
+        <div style="margin:20px 0;">
+          <input id="plain" type="checkbox" onclick="setTabs()"><span>plain</span><br>
+          <input id="narrow" type="checkbox" onclick="setTabs()"><span>narrow</span><br>
+          <input id="pill" type="checkbox" onclick="setTabs()"><span>pill</span><br>
+          <input id="justified" type="checkbox" onclick="setTabs()"><span>justified</span>
+        </div>
+        <div id="tt" class="easyui-tabs" style="width:700px;height:250px" data-options="tabWidth:100,tabHeight:50,tools:'#tab-tools'">
+          <div title="About" style="padding:10px">
+            <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+            <ul>
+              <li>easyui is a collection of user-interface plugin based on jQuery.</li>
+              <li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+              <li>using easyui you don't need to write many javascript code, you usually defines user-interface by
+                writing some HTML markup.</li>
+              <li>complete framework for HTML5 web page.</li>
+              <li>easyui save your time and scales while developing your products.</li>
+              <li>easyui is very easy but powerful.</li>
+            </ul>
+          </div>
+          <div title="My Documents" style="padding:10px">
+            <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+          </div>
+          <div title="Help" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+            This is the help content.
+          </div>
+        </div>
+        <div id="tab-tools">
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-add'" onclick="addPanel()"></a>
+          <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-remove'"
+            onclick="removePanel()"></a>
+        </div>
 
       </section>
     </div>
@@ -197,12 +239,46 @@
   <script src="bower_components/fastclick/lib/fastclick.js"></script>
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
+  <!-- jEasyUI -->
+  <script src="bower_components/jeasyui/jquery.easyui.min.js"></script>
   <script>
-   
+
+
+    function setTabs() {
+      $('#tt').tabs({
+        plain: $('#plain').is(':checked'),
+        narrow: $('#narrow').is(':checked'),
+        pill: $('#pill').is(':checked'),
+        justified: $('#justified').is(':checked')
+      })
+    }
+
+    $('#tt').tabs({
+      plain: true,
+      narrow: true,
+      tabPosition: 'top',
+      // tabPosition: 'left',
+    })
+
+
   </script>
-  <script>
-
-
+  <script type="text/javascript">
+    var index = 0;
+    function addPanel() {
+      index++;
+      $('#tt').tabs('add', {
+        title: 'Tab' + index,
+        content: '<div style="padding:10px">Content' + index + '</div>',
+        closable: true
+      });
+    }
+    function removePanel() {
+      var tab = $('#tt').tabs('getSelected');
+      if (tab) {
+        var index = $('#tt').tabs('getTabIndex', tab);
+        $('#tt').tabs('close', index);
+      }
+    }
   </script>
 </body>
 
