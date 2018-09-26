@@ -46,10 +46,10 @@
 }
 
 .skin-blue .main-header .navbar .nav .open.open > a,
-.skin-blue .main-header .navbar .nav>li>a:focus {
+.skin-blue .main-header .navbar .nav > li > a:focus {
   background-color: transparent;
 
-  i{
+  i {
     color: #73818f;
   }
 }
@@ -202,8 +202,8 @@
 }
 
 .logoImg {
-  width: 89px;
-  height: 25px;
+  width: 160px;
+  height: 40px;
   display: inline-block;
   vertical-align: middle;
   border-style: none;
@@ -215,14 +215,13 @@
   border-color: transparent;
 }
 
-
 .skin-blue .main-sidebar,
 .skin-blue .sidebar-menu > li:hover > a {
-    background-color: #324359;
+  background-color: #324359;
 }
 
 .skin-blue .sidebar-menu > li.header,
 .skin-blue .sidebar-menu > li > .treeview-menu,
 .skin-blue .sidebar-menu > li.menu-open > a {
-    background-color: #29384b;
+  background-color: #29384b;
 }
