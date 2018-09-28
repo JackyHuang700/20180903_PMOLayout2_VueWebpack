@@ -1,0 +1,157 @@
+
+
+.card2 {
+  width: 100%;
+  // max-width: 450px;
+  cursor: pointer;
+  // box-shadow: 0px 2px 2px #dfe6f0;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, .3);
+  text-align: left;
+}
+
+.card2 .card2Header {
+  padding: 0px 20px;
+  min-height: 27px;
+  // line-height: 50px;
+  height: auto;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  /* border: 1px solid red; */
+}
+
+.card2 .card2Body {
+  color: #bdc5cd;
+  font-weight: 400;
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.card2 .card2Footer {
+  min-height: 50px;
+  line-height: 50px;
+  height: auto;
+  border-radius: 0 0 5px 5px;
+  /* border: 1px solid red; */
+  background-color: #f4f6f8;
+  color: #666;
+  font-size: 15px;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+.card2StyleBGC {
+  background-color: rgba(129, 172, 232, 0.714);
+}
+.card2Style2BGC {
+  background-color: #68cf8c;
+}
+.card2Style3BGC {
+  background-color: #ed7070;
+}
+
+.mb-20{
+  margin-bottom: 20px;
+}
+
+
+// form
+$templateColor: #707F8C;
+.formBox {
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid rgca(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    margin: 0 auto 40px;
+    padding: 0;
+    color: $templateColor;
+  }
+
+  input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+
+    // 移動
+  
+    // 搭配 required tag
+    // &:valid ~ label,
+    &:focus ~ label,
+    &.isCompleted ~ label {
+      top: -12px;
+      left: 0;
+      color: $templateColor;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    // &:valid,
+    &:focus,
+    &.isCompleted{
+      border-bottom: 2px solid $templateColor;
+    }
+
+    &:focus ~ i{
+        color: #bdc5cd;
+    }
+  }
+
+  .required{
+    color: red;
+    font-size: 14px;
+  }
+
+  [type='submit'] {
+    border: none;
+    cursor: pointer;
+    background-color: $templateColor;
+    color: #fff;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  form {
+    div {
+      position: relative;
+
+      label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: #999;
+        transition: top 0.2s ease-in-out;
+        pointer-events: none;
+      }
+
+      i{
+        position: absolute;
+        top: 20px;
+        right: 4px;
+        pointer-events: none;
+        color: $templateColor;
+      }
+    }
+  }
+}
