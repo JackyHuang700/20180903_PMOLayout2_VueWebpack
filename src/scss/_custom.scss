@@ -36,13 +36,19 @@
   }
 
   .badge {
-    float: right;
+    position: absolute;
+    right: 12px;
+    top: 12px;
   }
+}
+
+.dropdown-item{
+  overflow: hidden;
 }
 
 .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
   right: 30px;
-  top: 40px;
+  top: 48px;
 }
 
 .skin-blue .main-header .navbar .nav .open.open > a,

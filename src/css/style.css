@@ -35,12 +35,18 @@
 }
 
 .dropdown-item.dropdown-item .badge {
-  float: right;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.dropdown-item {
+  overflow: hidden;
 }
 
 .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
   right: 30px;
-  top: 40px;
+  top: 48px;
 }
 
 .skin-blue .main-header .navbar .nav .open.open > a,
@@ -203,8 +209,8 @@
 }
 
 .logoImg {
-  width: 89px;
-  height: 25px;
+  width: 160px;
+  height: 40px;
   display: inline-block;
   vertical-align: middle;
   border-style: none;
@@ -228,7 +234,8 @@
 }
 
 .content {
-  height: calc(100vh - 41px - 51px - 51px);
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 

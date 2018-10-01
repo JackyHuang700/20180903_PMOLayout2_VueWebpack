@@ -23,7 +23,7 @@
 }
 
 .card2 .card2Body {
-  color: #bdc5cd;
+  color: #505a65;
   font-weight: 400;
   padding: 10px 20px;
   font-size: 14px;
@@ -154,4 +154,22 @@ $templateColor: #707F8C;
       }
     }
   }
+}
+
+
+.cRed{
+  color: red;
+  transition: color .3s ease-in-out;
+}
+
+.cRedHover:hover{
+  color: #b63e3e;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.point-none{
+  pointer-events: none;
 }
