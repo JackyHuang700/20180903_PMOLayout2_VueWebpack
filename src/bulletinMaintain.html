@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,6 +27,11 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="css/myJobs.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+  <link rel="stylesheet" href="css/select2.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -180,6 +184,146 @@
       <section class="content">
 
 
+        <div class="container-fluid">
+          <div class="row">
+            <section>
+              <div class="col-md-12 mb-20">
+                <h3>1. 公佈欄列表</h3>
+                <div class="card2">
+                  <div class="card2Header card2StyleBGC">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    操作
+                  </div>
+                  <div class="card2Body">
+                    <div class="row">
+                      <button type="button" class="btn btn-primary col-md-1">新增</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="card2">
+                  <div class="card2Header card2StyleBGC">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    列表
+                  </div>
+                  <div class="card2Body">
+                    <table id="example" class="display" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>公告事項</th>
+                          <th>公告類別</th>
+                          <th>結束時間</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="col-md-12 mb-20">
+                <h3>2. 會議室新增/修改</h3>
+                <div class="card2">
+                  <div class="card2Header card2StyleBGC">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    列表
+                  </div>
+                  <div class="card2Body">
+                    <div class="row">
+                      <div class="formBox">
+                        <form>
+                          <div>
+                            <input type="text" placeholder="" />
+                            <label for=""><span class="required">*</span> 公告標題</label>
+                          </div>
+                          <div>
+                            <textarea type="text"></textarea>
+                            <label for=""><span class="required">*</span> 公告內文</label>
+                          </div>
+                          <div class="select2Require">
+                            <select id="templatingSelect2">
+                              <option value=""></option>
+                              <option value="a">全公司公告</option>
+                              <option value="b">王小明</option>
+                            </select>
+                          </div>
+                          <div>
+                            <input type="text" id="" placeholder="" />
+                            <label><span class="required">*</span> 開始日期</label>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <input type="text" id="" placeholder="" />
+                            <label><span class="required">*</span> 結束日期</label>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                          </div>
+                          <button type="submit">儲存</button>
+                        </form>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="col-md-12 mb-20">
+                <h3>3. 公告類別維護</h3>
+                <div class="card2">
+                  <div class="card2Header card2StyleBGC">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    列表
+                  </div>
+                  <div class="card2Body">
+                    <table id="example2" class="display" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>公告類別代碼</th>
+                          <th>公告類別</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="col-md-12 mb-20">
+                <h3>4. 公告類別新增/修改</h3>
+                <div class="card2">
+                  <div class="card2Header card2StyleBGC">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    列表
+                  </div>
+                  <div class="card2Body">
+                    <div class="row">
+                      <div class="formBox">
+                        <form>
+                          <div>
+                            <input type="text" placeholder="" />
+                            <label for=""><span class="required">*</span> 公告類別代碼</label>
+                          </div>
+                          <div>
+                            <input type="text" placeholder="" />
+                            <label for=""><span class="required">*</span> 公告類別</label>
+                          </div>
+                          
+                          <button type="submit">儲存</button>
+                        </form>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
 
       </section>
     </div>
@@ -208,15 +352,83 @@
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
   <script src="js/global.js"></script>
+  <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="./js/src/myJobs.js"></script>
   <script>
 
+    (function () {
+      // example
+      $('#example').DataTable({
+        "scrollX": true,
+        'ajax': '/products/aaaa',
+        'columns': [
+          { 'data': 'name' },
+          { 'data': 'position' },
+          { 'data': 'office' },
+          {
+            'className': 'details-control',
+            'orderable': false,
+            'data': null,
+            'defaultContent': ''
+          },
+        ],
+        'columnDefs': [
+          {
+            'targets': 0,
+            'data': '',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              return ('<a href="#">端午節休假日</a>')
+            }
+          },
+          {
+            'targets': 3,
+            'data': '',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              return ('<i class="fa fa-trash cRed cRedHover font-20" aria-hidden="true"></i>')
+            }
+          },
+        ],
+      })
 
-
-
-
-
-
+      // example2
+      $('#example2').DataTable({
+        "scrollX": true,
+        'ajax': '/products/aaaa',
+        'columns': [
+          { 'data': 'name' },
+          { 'data': 'position' },
+          {
+            'className': 'details-control',
+            'orderable': false,
+            'data': null,
+            'defaultContent': ''
+          },
+        ],
+        'columnDefs': [
+          {
+            'targets': 2,
+            'data': '',
+            'orderable': false,
+            'render': function (data, type, row, meta) {
+              return ('<i class="fa fa-trash cRed cRedHover font-20" aria-hidden="true"></i>')
+            }
+          },
+        ],
+      })
+    })()
   </script>
+  <script>
+      (function () {
+        $("#templatingSelect2").select2({
+          placeholder: "公告類別",
+        });
+      })()
+  </script>
+
 </body>
 
 </html>

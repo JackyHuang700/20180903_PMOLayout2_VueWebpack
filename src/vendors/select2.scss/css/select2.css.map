@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "select2.css",
+	"sources": [
+		"../../../scss/vendors/select2.scss"
+	],
+	"sourcesContent": [
+		""
+	],
+	"names": [],
+	"mappings": ""
+}
