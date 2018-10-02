@@ -54,6 +54,11 @@
   margin-bottom: 20px;
 }
 
+.mx-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .formBox {
   width: 400px;
   background-color: #fff;
