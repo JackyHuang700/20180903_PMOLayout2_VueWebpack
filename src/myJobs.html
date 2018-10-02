@@ -418,7 +418,6 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
-  <script src="js/global.js"></script>
   <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="./js/src/myJobs.js"></script>
@@ -426,6 +425,7 @@
     (function () {
       // example
       $('#example').DataTable({
+        "scrollX": true,
         'ajax': '/products/aaaa',
         'columns': [
           { 'data': 'name' },
@@ -438,6 +438,7 @@
 
       // example2
       var example2Table = $('#example2').DataTable({
+        "scrollX": true,
         'ajax': '/products/aaaa',
         'columns': [
           {
@@ -542,6 +543,7 @@
 
       // example3
       $('#example3').DataTable({
+        "scrollX": true,
         'ajax': '/products/aaaa',
         // 'ajax': {
         //   'url': '/products/aaaa',
