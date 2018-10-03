@@ -17,17 +17,6 @@
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,11 +27,11 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="css/myJobs.css">
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+  <link rel="stylesheet" href="css/select2.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -194,201 +183,33 @@
       <!-- main -->
       <section class="content">
 
+
         <div class="container-fluid">
           <div class="row">
 
-            <!-- 
-              <div class="col-md-12 mb-20">
-                <h3>InfoCard</h3>
-                <div class="card2">
-                  <div class="card2Header card2StyleBGC">
+            <div class="col-xs-12">
+              <div class="box box-info boxStyle mx-10">
+                <div class="box-header with-border">
+                  <h3 class="box-title">
                     <i class="fa fa-wpforms" aria-hidden="true"></i>
-                    操作
-                  </div>
-                  <div class="card2Body">
-                    <div class="row">
-
-                    </div>
-                  </div>
-                  <div class="card2Footer">Footer</div>
+                    列表
+                  </h3>
                 </div>
-            </div> 
-          -->
-
-
-            <div class="col-md-12 mb-20">
-              <h3>一、 專案維護</h3>
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  操作
-                </div>
-                <div class="card2Body">
-                  <div class="row">
-                    <button type="button" class="btn btn-primary col-md-1">新增</button>
-                  </div>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  列表
-                </div>
-                <div class="card2Body">
-                  <table id="example" class="display" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>Project Name</th>
-                        <th>PM</th>
-                        <th>Start</th>
-                        <th>Finish</th>
-                        <th>檢視、維護</th>
-                      </tr>
-                    </thead>
-                    <!-- <tfoot>
-                              <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Start date</th>
-                              </tr>
-                            </tfoot> -->
-                  </table>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
-            <div class="col-md-12 mb-20">
-              <h3>二、 專案基本資料維護</h3>
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  操作
-                </div>
-                <div class="card2Body">
-                  <div class="row">
-                    <div class="col-md-4 formBox">
-                      <form>
-                        <div>
-                          <input type="text" id="inputA" placeholder="" />
-                          <label for="inputA">專案代號</label>
-                        </div>
-                        <div>
-                          <input type="text" id="" placeholder="" />
-                          <label>專案名稱</label>
-                        </div>
-                        <div>
-                          <input type="text" id="" placeholder="" />
-                          <label>起始日期</label>
-                          <i class="fa fa-calendar" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                          <textarea type="text"></textarea>
-                          <label for=""><span class="required">*</span> 備註</label>
-                        </div>
-                        <button type="submit">儲存</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
-            <div class="col-md-12 mb-20">
-              <h3>三、 專案工作維護(WBS)</h3>
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  操作
-                </div>
-                <div class="card2Body">
-                  <div class="row">
-                    <button type="button" class="btn btn-primary col-md-1" id="addExample2Table">新增</button>
-                  </div>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  列表
-                </div>
-                <div class="card2Body">
+                <div class="box-body">
                   <table id="example2" class="display" style="width:100%">
                     <thead>
                       <tr>
-                        <th></th>
-                        <th>Work Name</th>
-                        <th>負責人</th>
-                        <th>Days</th>
-                        <th>Start</th>
-                        <th>Finish</th>
-                        <th>功能</th>
+                        <th>公告類別代碼</th>
+                        <th>公告類別</th>
+                        <th>操作</th>
                       </tr>
                     </thead>
-                    <!-- <tfoot>
-                                <tr>
-                                  <th>Name</th>
-                                  <th>Position</th>
-                                  <th>Office</th>
-                                  <th>Start date</th>
-                                </tr>
-                              </tfoot> -->
                   </table>
                 </div>
-                <div class="card2Footer">Footer</div>
               </div>
             </div>
-            <div class="col-md-12 mb-20">
-              <h3>四、 專案成員維護</h3>
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  操作
-                </div>
-                <div class="card2Body">
-                  <div class="row">
-                    <button type="button" class="btn btn-primary col-md-1">新增</button>
-                  </div>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="card2">
-                <div class="card2Header card2StyleBGC">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  列表
-                </div>
-                <div class="card2Body">
-                  <table id="example3" class="display" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>部門</th>
-                        <th>姓名</th>
-                        <th>職稱</th>
-                        <th>工作描述</th>
-                        <th>功能</th>
-                      </tr>
-                    </thead>
-                    <!-- <tfoot>
-                                <tr>
-                                  <th>Name</th>
-                                  <th>Position</th>
-                                  <th>Office</th>
-                                  <th>Start date</th>
-                                </tr>
-                              </tfoot> -->
-                  </table>
-                </div>
-                <div class="card2Footer">Footer</div>
-              </div>
-            </div>
+
+
           </div>
         </div>
 
@@ -421,148 +242,28 @@
   <script src="js/global.js"></script>
   <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
   <script src="./js/src/myJobs.js"></script>
   <script>
+
     (function () {
-      // example
-      $('#example').DataTable({
+      // example2
+      $('#example2').DataTable({
         "scrollX": true,
         'ajax': '/products/aaaa',
         'columns': [
           { 'data': 'name' },
           { 'data': 'position' },
-          { 'data': 'office' },
-          { 'data': 'start_date' },
-          { 'data': 'salary' }
-        ]
-      })
-
-      // example2
-      var example2Table = $('#example2').DataTable({
-        "scrollX": true,
-        'ajax': '/products/aaaa',
-        'columns': [
           {
             'className': 'details-control',
             'orderable': false,
             'data': null,
             'defaultContent': ''
           },
-          { 'data': 'name' },
-          { 'data': 'position' },
-          { 'data': 'office' },
-          { 'data': 'start_date' },
-          { 'data': 'salary' },
-          { 'data': 'salary' }
         ],
         'columnDefs': [
           {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<i class="fa fa-plus point-none" aria-hidden="true"></i>')
-            }
-          },
-          {
-            'targets': 6,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<i class="fa fa-trash cRed cRedHover font-20" aria-hidden="true"></i>')
-            }
-          },
-        ],
-      })
-
-      var addExample2TableDom = document.getElementById('addExample2Table')
-      addExample2TableDom.addEventListener('click', function (e) {
-        example2Table.row.add({
-          'id': '1',
-          'name': 'Tiger Nixon',
-          'position': 'System Architect',
-          'salary': '$320,800',
-          'start_date': '2011/04/25',
-          'office': 'Edinburgh',
-        }).draw(false)
-      })
-
-      $('#example2 tbody').on('click', 'td.details-control', function (e) {
-        var self = e.target
-        console.log(self)
-        var tr = $(this).closest('tr')
-        var row = example2Table.row(tr)
-        var icon = 'fa-minus'
-        var icon2 = 'fa-plus'
-
-        if (row.child.isShown()) {
-          // This row is already open - close it
-          row.child.hide()
-          tr.removeClass('shown')
-          self.children[0].classList.remove(icon)
-          self.children[0].classList.add(icon2)
-        } else {
-          // Open this row
-          row.child(childRows(row.data())).show()
-          tr.addClass('shown')
-          self.children[0].classList.add(icon)
-          self.children[0].classList.remove(icon2)
-        }
-      })
-
-      function childRows(d) {
-        d = d || []
-
-        var trTemplate = ''
-        if (d.length) {
-          for (var index = 0; index < d.length; index++) {
-            trTemplate += (
-              '<tr>' +
-              '  <td>{{subData_1}}</td>' +
-              '  <td>{{subData_2}}</td>' +
-              '  <td>{{subData_3}}</td>' +
-              '  <td>{{subData_4}}</td>' +
-              '  <td>{{subData_5}}</td>' +
-              '</tr>'
-            ).replace(/{{subData_1}}/g, '')
-              .replace(/{{subData_2}}/g, '')
-              .replace(/{{subData_3}}/g, '')
-              .replace(/{{subData_4}}/g, '')
-              .replace(/{{subData_5}}/g, '')
-          }
-        }
-
-        return (
-          '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;" class="table table-striped">' +
-          '  <tr>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '    <td scope="col">....</td>' +
-          '  </tr>' + trTemplate +
-          '</table>')
-      }
-
-      // example3
-      $('#example3').DataTable({
-        "scrollX": true,
-        'ajax': '/products/aaaa',
-        // 'ajax': {
-        //   'url': '/products/aaaa',
-        //   "contentType": "application/json",
-        //   "data": function (d) {
-        //     console.log('ad:', d);
-        //   },
-        // },
-        'columns': [
-          { 'data': 'name' },
-          { 'data': 'position' },
-          { 'data': 'office' },
-          { 'data': 'start_date' },
-          { 'data': 'salary' }
-        ],
-        'columnDefs': [
-          {
-            'targets': 4,
+            'targets': 2,
             'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
@@ -573,6 +274,14 @@
       })
     })()
   </script>
+  <script>
+      (function () {
+        $("#templatingSelect2").select2({
+          placeholder: "公告類別",
+        });
+      })()
+  </script>
+
 </body>
 
 </html>

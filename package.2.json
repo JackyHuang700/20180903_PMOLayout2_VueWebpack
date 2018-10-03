@@ -45,13 +45,8 @@
     "build-copy": "copyfiles -a -e \"src/scss/**/*\" -u 1 \"src/**/*\" dist/",
     "build-vendors": "node build/vendors.js",
     "css": "npm-run-all --parallel css-compile* --sequential css-prefix css-minify*",
-    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss src/css/style.css",
-    "css-compile2": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/login.scss src/css/login.css",
-    "css-compile3": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/dragula.scss src/css/dragula.css",
     "css-compile4": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/test.scss src/css/test.css",
     "css-compile5": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/loginV2.scss src/css/loginV2.css",
-    "css-compile6": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/myJobs.scss src/css/myJobs.css",
-    "css-compile7": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/meetingManage.scss src/css/meetingManage.css",
     "css-compile8": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/select2.scss src/css/select2.css",
     "css-compile-vendors": "node build/vendors-sass.js",
     "css-lint": "stylelint --config build/.stylelintrc --syntax scss \"src/scss/**/*.scss\"",
@@ -137,6 +132,7 @@
     "pace": "0.0.4",
     "raphael": "^2.2.7",
     "select2": "^4.0.3",
+    "jquery-mockjax": "^2.5.0",
     "slimscroll": "^0.9.1"
   },
   "engines": {
