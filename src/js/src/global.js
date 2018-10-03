@@ -17,6 +17,6 @@
     '<li><a href="bulletinMaintain2.html"><i class="fa fa-circle-o"></i> 公布欄維護-公佈欄列表</a></li>' +
     '<li><a href="bulletinMaintain3.html"><i class="fa fa-circle-o"></i> 公布欄維護-會議室新增/修改</a></li>' +
     '<li><a href="bulletinMaintain4.html"><i class="fa fa-circle-o"></i> 公布欄維護-公告類別維護</a></li>' +
-    '<li><a href="bulletinMaintain5.html"><i class="fa fa-circle-o"></i> 公告類別新增/修改</a></li>'
+    '<li><a href="bulletinMaintain5.html"><i class="fa fa-circle-o"></i> 公布欄維護-公告類別新增/修改</a></li>'
   )
 })()
