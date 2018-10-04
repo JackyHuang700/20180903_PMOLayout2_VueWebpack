@@ -17,16 +17,6 @@
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,15 +26,9 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <!-- fullcalendar -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
-  <link rel="stylesheet" href="css/select2.css">
-  <link rel="stylesheet" href="css/myJobs.css">
-  <link rel="stylesheet" href="css/meetingManage.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -198,101 +182,49 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="box box-info boxStyle">
-              <div class="box-header with-border">
-                <h3 class="box-title">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  操作
-                </h3>
-              </div>
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <button type="button" class="btn btn-primary col-md-1">新增</button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="box box-info boxStyle mx-10">
-              <div class="box-header with-border">
-                <h3 class="box-title">
-                  <i class="fa fa-wpforms" aria-hidden="true"></i>
-                  列表
-                </h3>
-              </div>
-              <div class="box-body">
-                <div class="row">
-                  <div class="col-xs-12">
-                    <table id="example5" class="display" style="width:100%">
-                      <thead>
-                        <tr>
-                          <th>會議室名稱</th>
-                          <th>會議室說明</th>
-                          <th>管理員</th>
-                          <th>操作</th>
-                        </tr>
-                      </thead>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-4">
-              <div class="box box-info boxStyle mx-10">
+            <div class="col-xs-12">
+              <div class="box box-info boxStyle">
                 <div class="box-header with-border">
                   <h3 class="box-title">
                     <i class="fa fa-wpforms" aria-hidden="true"></i>
-                    列表
-                  </h3>
-                </div>
-                <div class="box-body">
-                  <div class="formBox">
-                    <form>
-                      <div>
-                        <input type="text" placeholder="" />
-                        <label for=""><span class="required">*</span> 會議室名稱</label>
-                      </div>
-                      <div>
-                        <textarea type="text"></textarea>
-                        <label for=""><span class="required">*</span> 會議室說明</label>
-                      </div>
-                      <div class="select2Require">
-                        <select class="templatingSelect25">
-                          <option value=""></option>
-                          <option value="a">王大明</option>
-                          <option value="b">王小明</option>
-                        </select>
-                      </div>
-                      <button type="submit">儲存</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xs-12 mb-20">
-
-              <div class="box box-info boxStyle mx-10">
-                <div class="box-header with-border">
-                  <h3 class="box-title">
-                    <i class="fa fa-wpforms" aria-hidden="true"></i>
-                    列表
+                    操作
                   </h3>
                 </div>
                 <div class="box-body">
                   <div class="row">
                     <div class="col-xs-12">
-                      <select name="" id="">
-                        <option value="">2f大會議室</option>
-                      </select>
-                      <div id='calendar'></div>
+                      <button type="button" class="btn btn-primary col-md-1">新增</button>
+                      <button type="button" class="btn btn-danger col-md-1">刪除</button>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="box box-info boxStyle mx-10">
+                <div class="box-header with-border">
+                  <h3 class="box-title">
+                    <i class="fa fa-wpforms" aria-hidden="true"></i>
+                    列表
+                  </h3>
+                </div>
+                <div class="box-body">
+                  <table id="example" class="display" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>
+                          <input type="checkbox">
+                        </th>
+                        </th>
+                        <th>訊息標題</th>
+                        <th>相關專案</th>
+                        <th>發送時間</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
             </div>
+
 
           </div>
         </div>
@@ -321,34 +253,29 @@
   </script>
   <!-- Bootstrap 3.3.7 -->
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
+  <script src="./js/src/myJobs.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
   <script src="js/global.js"></script>
-  <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <!-- fullcalendar -->
-  <script src="bower_components/moment/min/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
-  <script src="./js/src/myJobs.js"></script>
-  <script src="./js/src/myCalendar.js"></script>
   <script>
-    (function () {
 
-      // example5
-      $('#example5').DataTable({
+    (function () {
+      // example
+      $('#example').DataTable({
         "scrollX": true,
         'ajax': '/products/aaaa',
         'columns': [
-          { 'data': 'name' },
-          { 'data': 'position' },
-          { 'data': 'office' },
           {
             'className': 'details-control',
             'orderable': false,
             'data': null,
             'defaultContent': ''
           },
+          { 'data': 'name' },
+          { 'data': 'position' },
+          { 'data': 'position' },
         ],
         'columnDefs': [
           {
@@ -356,30 +283,13 @@
             'data': '',
             'orderable': false,
             'render': function (data, type, row, meta) {
-              return ('<a href="#">{{index}}}F大會議室</a>').replace(/{{index}}}/g, (meta.row + 1))
-            }
-          },
-          {
-            'targets': 3,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<i class="fa fa-trash cRed cRedHover font-20" aria-hidden="true"></i>')
+              return ('<input type="checkbox" >')
             }
           },
         ],
       })
-
-
     })()
   </script>
-<script>
-    $(".templatingSelect25").select2({
-      placeholder: "管理員",
-    });
-
-
-</script>
 </body>
 
 </html>
