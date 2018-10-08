@@ -188,16 +188,5 @@ $.mockjax({
   status: 200,
   responseTime: 150,
   responseText: responseText
-})(function () {
-  $('.formBox input').focusout(formBoxFunc);
-  $('.formBox textarea').focusout(formBoxFunc);
-
-  function formBoxFunc() {
-    if ($(this).val() !== '') {
-      $(this).addClass('isCompleted');
-    } else {
-      $(this).removeClass('isCompleted');
-    }
-  }
-})();
+});
 //# sourceMappingURL=myJobs.js.map

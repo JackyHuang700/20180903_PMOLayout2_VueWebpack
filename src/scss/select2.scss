@@ -2,6 +2,7 @@
 span.select2-container {
   width: 100% !important;
   margin-bottom: 30px;
+  padding-top: 15px;
 }
 
 .select2-container--default .select2-selection--single,
@@ -103,5 +104,24 @@ span.select2-container {
 
   .select2-container .select2-selection--single .select2-selection__rendered {
     padding-left: 12.5px;
+  }
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 7px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__clear {
+  padding-top: 2px;
+  padding-right: 7px;
+  color: red;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
   }
 }

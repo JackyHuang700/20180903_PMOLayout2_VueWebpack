@@ -248,6 +248,7 @@
                               <option value="a">全公司公告</option>
                               <option value="b">王小明</option>
                             </select>
+                            <label class="d-none pl-13">公告類別</label>
                           </div>
                           <div>
                             <input type="text" id="" placeholder="" />
@@ -355,6 +356,7 @@
   <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="js/select2.js"></script>
   <script src="./js/src/myJobs.js"></script>
   <script>
 
@@ -425,7 +427,10 @@
       (function () {
         $("#templatingSelect2").select2({
           placeholder: "公告類別",
+          allowClear: true,
         });
+
+         $('#templatingSelect2').on('select2:select select2:unselecting', select2Func);
       })()
   </script>
 

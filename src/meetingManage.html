@@ -258,6 +258,7 @@
                               <option value="a">大型</option>
                               <option value="b">中型</option>
                             </select>
+                            <label class="d-none pl-13">會議類型</label>
                           </div>
                           <div>
                             <input type="text" id="inputA" placeholder="" />
@@ -279,6 +280,7 @@
                               <option value="a">王大明</option>
                               <option value="b">王小明</option>
                             </select>
+                            <label class="d-none">會議室</label>
                           </div>
                           <div>
                             <!-- <input type="text" id="" placeholder="" /> -->
@@ -287,6 +289,7 @@
                               <option value="a">王大明</option>
                               <option value="b">王小明</option>
                             </select>
+                            <label class="d-none">與會主持人</label>
                             <!-- <label>與會主持人</label> -->
                             <!-- <label></label> -->
                           </div>
@@ -296,6 +299,7 @@
                               <option value="a">王大明</option>
                               <option value="b">王小明</option>
                             </select>
+                            <label class="d-none">與會人員</label>
                             <!-- <input type="text" id="" placeholder="" /> -->
                             <!-- <label>與會人員</label> -->
                           </div>
@@ -311,6 +315,7 @@
                               <option value="a">大型</option>
                               <option value="b">中型</option>
                             </select>
+                            <label class="d-none">專屬檔案</label>
                           </div>
                           <div>
                             <input type="file" class="isCompleted">
@@ -528,6 +533,7 @@
                             <option value="a">王大明</option>
                             <option value="b">王小明</option>
                           </select>
+                          <label class="d-none pl-13">管理員</label>
                         </div>
                         <button type="submit">儲存</button>
                       </form>
@@ -581,6 +587,7 @@
   <script src="bower_components/moment/min/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="js/select2.js"></script>
   <script src="./js/src/myJobs.js"></script>
   <script src="./js/src/myCalendar.js"></script>
   <script>
@@ -747,27 +754,40 @@
   <script>
     $(".templatingSelect2").select2({
       placeholder: "會議類型",
+      allowClear: true,
     });
     $(".templatingSelect22").select2({
       placeholder: "會議室",
+      allowClear: true,
     });
     $(".templatingSelect23").select2({
       placeholder: "與會主持人",
+      allowClear: true,
     });
     $(".templatingSelect24").select2({
       placeholder: "專屬檔案",
+      allowClear: true,
     });
     $(".templatingSelect25").select2({
       placeholder: "管理員",
+      allowClear: true,
     });
 
 
     $('.templatingSelect21').select2({
       minimumResultsForSearch: 1,
       placeholder: '與會人員',
+      allowClear: true,
       tags: true,
       tokenSeparators: [',', ' '],
     });
+
+    $('.templatingSelect2').on('select2:select select2:unselecting', select2Func);
+    $('.templatingSelect22').on('select2:select select2:unselecting', select2Func);
+    $('.templatingSelect23').on('select2:select select2:unselecting', select2Func);
+    $('.templatingSelect24').on('select2:select select2:unselecting', select2Func);
+    $('.templatingSelect25').on('select2:select select2:unselecting', select2Func);
+    $('.templatingSelect21').on('select2:select select2:unselecting', select2Func);
   </script>
 </body>
 

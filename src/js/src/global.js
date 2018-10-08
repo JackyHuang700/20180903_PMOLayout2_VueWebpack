@@ -19,4 +19,46 @@
     '<li><a href="bulletinMaintain4.html"><i class="fa fa-circle-o"></i> 公布欄維護-公告類別維護</a></li>' +
     '<li><a href="bulletinMaintain5.html"><i class="fa fa-circle-o"></i> 公布欄維護-公告類別新增/修改</a></li>'
   )
+})();
+
+
+(function () {
+  $('.formBox input').focusout(formBoxFunc)
+  // $('.formBox select').focusout(formBoxFunc)
+  $('.formBox textarea').focusout(formBoxFunc)
+var formBoxInputList = $('.formBox input')
+// var formBoxSelectList = $('.formBox select')
+var formBoxTextarea = $('.formBox textarea')
+
+for (var index = 0; index < formBoxInputList.length; index++) {
+ var formBoxInput = formBoxInputList[index]
+  $(formBoxInput).trigger('focusout')
+}
+// for (var index = 0; index < formBoxSelectList.length; index++) {
+//  var formBoxInput = formBoxSelectList[index]
+//   $(formBoxInput).trigger('focusout')
+// }
+for (var index = 0; index < formBoxTextarea.length; index++) {
+ var formBoxInput = formBoxTextarea[index]
+  $(formBoxInput).trigger('focusout')
+}
+
+  function formBoxFunc() {
+    // var self = this
+    // against select2
+// console.log(self);
+// if (self.tagName === 'SELECT') {
+//   if (self.value !== '') {
+//     debugger
+    
+//   }
+// }
+
+
+    if ($(this).val() !== '') {
+      $(this).addClass('isCompleted')
+    } else {
+      $(this).removeClass('isCompleted')
+    }
+  }
 })()

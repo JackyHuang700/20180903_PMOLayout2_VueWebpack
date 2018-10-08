@@ -264,6 +264,7 @@
                           <option value="a">王大明</option>
                           <option value="b">王小明</option>
                         </select>
+                        <label class="d-none pl-13">管理員</label>
                       </div>
                       <button type="submit">儲存</button>
                     </form>
@@ -330,6 +331,7 @@
   <script src="bower_components/moment/min/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="js/select2.js"></script>
   <script src="./js/src/myJobs.js"></script>
   <script src="./js/src/myCalendar.js"></script>
   <script>
@@ -376,8 +378,10 @@
 <script>
     $(".templatingSelect25").select2({
       placeholder: "管理員",
+      allowClear: true,
     });
 
+    $('.templatingSelect25').on('select2:select select2:unselecting', select2Func);
 
 </script>
 </body>

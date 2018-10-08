@@ -211,21 +211,11 @@ const responseText = {
   ]
 }
 
+
 $.mockjax({
   url: '/products/aaaa',
   status: 200,
   responseTime: 150,
-  responseText
-})
-(function () {
-  $('.formBox input').focusout(formBoxFunc)
-  $('.formBox textarea').focusout(formBoxFunc)
+  responseText: responseText
+});
 
-  function formBoxFunc() {
-    if ($(this).val() !== '') {
-      $(this).addClass('isCompleted')
-    } else {
-      $(this).removeClass('isCompleted')
-    }
-  }
-})()

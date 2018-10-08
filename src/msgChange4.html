@@ -228,6 +228,7 @@
                               <option value="a">大型</option>
                               <option value="b">中型</option>
                             </select>
+                                              <label class="d-none">寄件人</label>
                           </div>
                           <div>
                             <select id="templatingSelect22" multiple>
@@ -236,6 +237,7 @@
                                 <option value="a">大型</option>
                                 <option value="b">中型</option>
                               </select>
+                                                <label class="d-none">收件人</label>
                           </div>
                           <div>
                             <input type="text" placeholder="" />
@@ -291,15 +293,22 @@
   <script src="js/adminlte.min.js"></script>
   <script src="js/global.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="js/select2.js"></script>
   <script>
 
     (function () {
       $("#templatingSelect2").select2({
         placeholder: "寄件人",
+              allowClear: true,
       });
       $("#templatingSelect22").select2({
         placeholder: "收件人",
+              allowClear: true,
       });
+
+    $('#templatingSelect2').on('select2:select select2:unselecting', select2Func);
+    $('#templatingSelect22').on('select2:select select2:unselecting', select2Func);
+      
     })()
   </script>
 </body>

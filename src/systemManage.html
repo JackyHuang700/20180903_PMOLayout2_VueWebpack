@@ -17,16 +17,6 @@
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,15 +26,11 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <!-- fullcalendar -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
-  <link rel="stylesheet" href="css/select2.css">
-  <link rel="stylesheet" href="css/myJobs.css">
-  <link rel="stylesheet" href="css/meetingManage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css">
+  <link rel="stylesheet" href="./css/systemManage.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -198,171 +184,58 @@
 
         <div class="container-fluid">
           <div class="row">
-            <section>
-              <div class="col-md-12 mb-20">
-                <h3>三、 會議召開(進入會議)</h3>
-                <div class="card2">
-                  <div class="card2Header card2StyleBGC">
-                    <i class="fa fa-wpforms" aria-hidden="true"></i>
-                    操作
-                  </div>
-                  <div class="card2Body">
-                    <div class="row">
-                      <button type="button" class="btn btn-primary col-md-1">新增</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="card2">
-                  <div class="card2Header card2StyleBGC">
-                    <i class="fa fa-wpforms" aria-hidden="true"></i>
-                    列表
-                  </div>
-                  <div class="card2Body">
-                    <div class="meetingOpen">
-                      <div class="meetingOpenLeft">
-                        <h3>會議名稱: XXX專案例行會議</h3>
-                        <h3>會議主題: XXX專案例行會議 - 專案工作檢討</h3>
-                        <h3>會議時間: 2018/7/1 9:00~12:00</h3>
-                        <h3>會議主持人: xxx</h3>
-                        <h3>與會人員: xxx、xxx、xxx、xxx</h3>
-                        <h3>會議室: 大會議室</h3>
-                        <h3>會議摘要:
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium corrupti fugiat
-                            nostrum
-                            fugit animi, debitis iusto velit cumque, et sint eligendi id temporibus vero modi quibusdam
-                            facilis autem sunt repellendus nisi totam repudiandae hic illum accusantium tenetur. Sint,
-                            reprehenderit libero?
-                          </p>
-                          <p>
-                            <button type="text" class="btn btn-danger">會議刪除</button>
-                            <button type="text" class="btn btn-default">會議結束</button>
-                          </p>
-                        </h3>
-                        <h3>報告人報告內容:</h3>
-                        <div>
-                          <select name="" id="">
-                            <option value="">xxx</option>
-                            <option value="">xxx</option>
-                            <option value="">xxx</option>
-                            <option value="">xxx</option>
-                          </select>
-                        </div>
-                        <div>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="meetingOpenRight">
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="selfPaper">
-                          <h3>鐘XX工作報告</h3>
-                          <table class="display example2" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="meetingOpenFooter">
-                        <h3>我的工作報告 - 工作清單選擇</h3>
-                        <div>
-                          <table id="example3" class="display" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>工作名稱</th>
-                                <th>狀態</th>
-                                <th>Common</th>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                        <div class="mx-10">
-                          <button type="text" class="btn btn-primary">確認</button>
-                        </div>
-                        <div>
-                          <table id="example4" class="display" style="width:100%">
-                            <thead>
-                              <tr>
-                                <th>附檔</th>
-                                <th>操作</th>
-                              </tr>
-                            </thead>
-                          </table>
-                          <input type="file" class="mx-10">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <div class="col-xs-12">
+              <section class="area">
+                <div class="leftArea">
 
+                  <div class="box box-info boxStyle mx-10">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">
+                        <i class="fa fa-wpforms" aria-hidden="true"></i>
+                        部門名稱
+                      </h3>
+                    </div>
+                    <div class="box-body">
+                      <div id="tree"></div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="rightArea">
+
+                  <div class="box box-info boxStyle mx-10">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">
+                        <i class="fa fa-wpforms" aria-hidden="true"></i>
+                        操作
+                      </h3>
+                    </div>
+                    <div class="box-body">
+                      <button type="button" class="btn btn-primary col-xs-1">新增</button>
+                    </div>
+                  </div>
+
+                  <div class="box box-info boxStyle mx-10">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">
+                        <i class="fa fa-wpforms" aria-hidden="true"></i>
+                        列表
+                      </h3>
+                    </div>
+                    <div class="box-body">
+                      <table id="example" class="display" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>部門</th>
+                            <th>操作</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
 
@@ -393,60 +266,37 @@
   <!-- AdminLTE App -->
   <script src="js/adminlte.min.js"></script>
   <script src="js/global.js"></script>
+  <!-- JsTree -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script>
+
   <script src="./bower_components/jquery-mockjax/dist/jquery.mockjax.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <!-- fullcalendar -->
-  <script src="bower_components/moment/min/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
-  <script src="js/select2.js"></script>
   <script src="./js/src/myJobs.js"></script>
-  <script src="./js/src/myCalendar.js"></script>
+
+  <script>
+    $('#tree').jstree({
+      'core': {
+        'data': [
+          { "id": "ajson2", "parent": "#", "text": "吃貨部" },
+          { "id": "ajson3", "parent": "ajson2", "text": "Aaron" },
+          { "id": "ajson6", "parent": "ajson2", "text": "Aaron2" },
+          { "id": "ajson4", "parent": "ajson3", "text": "Jacky" },
+          { "id": "ajson5", "parent": "ajson4", "text": "Lore" },
+        ]
+      }
+    }).bind("loaded.jstree", function (event, data) {
+      $(this).jstree("open_all");
+    });;
+  </script>
   <script>
     (function () {
-      // explame2
-      $('.example2').DataTable({
+      // example
+      $('#example').DataTable({
         "scrollX": true,
         'ajax': '/products/aaaa',
+        "searching": false,
         'columns': [
           { 'data': 'name' },
-          { 'data': 'position' },
-        ]
-      })
-
-      // explame3
-      $('#example3').DataTable({
-        "scrollX": true,
-        'ajax': '/products/aaaa',
-        'columns': [
-          {
-            'className': 'details-control',
-            'orderable': false,
-            'data': null,
-            'defaultContent': ''
-          },
-          { 'data': 'position' },
-          { 'data': 'office' },
-          { 'data': 'start_date' },
-        ],
-        'columnDefs': [
-          {
-            'targets': 0,
-            'data': '',
-            'orderable': false,
-            'render': function (data, type, row, meta) {
-              return ('<input type="checkbox">')
-            }
-          },
-        ],
-      })
-
-      // explame4
-      $('#example4').DataTable({
-        "scrollX": true,
-        'ajax': '/products/aaaa',
-        'columns': [
-          { 'data': 'position' },
           {
             'className': 'details-control',
             'orderable': false,
@@ -466,29 +316,8 @@
         ],
       })
 
+
     })()
-  </script>
-  <script>
-    window.onresize = reSizemeetingOpenRight
-    $(document).ready(reSizemeetingOpenRight)
-
-    //meetingOpenRight setting overflow
-    function reSizemeetingOpenRight() {
-      var meetingOpenLeftDom = document.getElementsByClassName('meetingOpenLeft')
-      var meetingOpenRightDom = document.getElementsByClassName('meetingOpenRight')
-      var meetingOpenLeftDomFirst = meetingOpenLeftDom[0]
-      var meetingOpenRightDomFirst = meetingOpenRightDom[0]
-      // debugger
-      if (meetingOpenLeftDomFirst.offsetHeight <= meetingOpenRightDomFirst.offsetHeight && screen.width >= 1685) {
-        meetingOpenRightDomFirst.style.height = meetingOpenLeftDomFirst.offsetHeight + 'px'
-        meetingOpenRightDomFirst.style.overflowY = "scroll"
-
-      } else {
-        meetingOpenRightDomFirst.style.height = 'auto'
-        meetingOpenRightDomFirst.style.overflowY = "hidden"
-
-      }
-    }
   </script>
 </body>
 

@@ -1,0 +1,33 @@
+.area {
+  width: 100%;
+  display: block;
+  width: 100%;
+  
+  > * {
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px 5px;
+  }
+
+  .leftArea {
+    width: 49.5%;
+    
+  }
+  .rightArea {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  .area {
+    .leftArea {
+      width: 100%;
+      display: block;
+    }
+    .rightArea {
+      width: 100%;
+      display: block;
+    }
+  }
+}

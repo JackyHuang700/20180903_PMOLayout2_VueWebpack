@@ -1,6 +1,7 @@
 span.select2-container {
   width: 100% !important;
   margin-bottom: 30px;
+  padding-top: 15px;
 }
 
 .select2-container--default .select2-selection--single,
@@ -76,7 +77,6 @@ span.select2-container {
 .select2-selection--multiple
 .select2-selection__choice__remove {
   color: #e66d6d;
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -84,7 +84,6 @@ span.select2-container {
 .select2-selection--multiple
 .select2-selection__choice__remove:hover {
   color: red;
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -110,4 +109,26 @@ span.select2-container {
 .select2Require .select2-container .select2-selection--single .select2-selection__rendered {
   padding-left: 12.5px;
 }
+
+.select2-container--default
+.select2-selection--single
+.select2-selection__arrow {
+  top: 7px;
+}
+
+.select2-container--default
+.select2-selection--single
+.select2-selection__clear {
+  padding-top: 2px;
+  padding-right: 7px;
+  color: red;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.select2-container--default
+.select2-selection--single
+.select2-selection__clear:hover {
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=select2.css.map */

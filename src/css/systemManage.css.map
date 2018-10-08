@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "systemManage.css",
+	"sources": [
+		"../scss/systemManage.scss"
+	],
+	"sourcesContent": [
+		".area {\r\n  width: 100%;\r\n  display: block;\r\n  width: 100%;\r\n  \r\n  > * {\r\n    vertical-align: top;\r\n    display: inline-block;\r\n    padding: 10px 5px;\r\n  }\r\n\r\n  .leftArea {\r\n    width: 49.5%;\r\n    \r\n  }\r\n  .rightArea {\r\n    width: 50%;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 1023px) {\r\n  .area {\r\n    .leftArea {\r\n      width: 100%;\r\n      display: block;\r\n    }\r\n    .rightArea {\r\n      width: 100%;\r\n      display: block;\r\n    }\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;CAgBZ;;AAnBD,AAKE,KALG,GAKD,CAAC,CAAC;EACF,cAAc,EAAE,GAAG;EACnB,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,QAAQ;CAClB;;AATH,AAWE,KAXG,CAWH,SAAS,CAAC;EACR,KAAK,EAAE,KAAK;CAEb;;AAdH,AAeE,KAfG,CAeH,UAAU,CAAC;EACT,KAAK,EAAE,GAAG;CACX;;AAIH,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,MAAM;EACvC,AACE,KADG,CACH,SAAS,CAAC;IACR,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,KAAK;GACf;EAJH,AAKE,KALG,CAKH,UAAU,CAAC;IACT,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,KAAK;GACf"
+}

@@ -65,12 +65,29 @@
   padding: 40px;
   border: 1px solid rgca(0, 0, 0, 0.1);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.formBox .close {
+  color: red;
+  text-shadow: 0 1px 0 red;
+  opacity: .8;
+  position: absolute;
+  top: -11px;
+  right: -4px;
+  z-index: 1;
+  transition: opacity .3s ease-in-out;
+  font-weight: 800;
+}
+
+.formBox .close:hover {
+  opacity: .5;
 }
 
 .formBox h2 {
   margin: 0 auto 40px;
   padding: 0;
-  color: #707F8C;
+  color: #707f8c;
 }
 
 .formBox input {
@@ -85,7 +102,8 @@
 }
 
 .formBox input,
-.formBox textarea {
+.formBox textarea,
+.formBox select {
   box-sizing: border-box;
   width: 100%;
   box-shadow: none;
@@ -97,22 +115,27 @@
 .formBox input:focus ~ label,
 .formBox input.isCompleted ~ label,
 .formBox textarea:focus ~ label,
-.formBox textarea.isCompleted ~ label {
+.formBox textarea.isCompleted ~ label,
+.formBox select:focus ~ label,
+.formBox select.isCompleted ~ label {
   top: -12px;
   left: 0;
-  color: #707F8C;
+  color: #707f8c;
   font-size: 12px;
   font-weight: bold;
 }
 
 .formBox input:focus, .formBox input.isCompleted,
 .formBox textarea:focus,
-.formBox textarea.isCompleted {
-  border-bottom: 2px solid #707F8C;
+.formBox textarea.isCompleted,
+.formBox select:focus,
+.formBox select.isCompleted {
+  border-bottom: 2px solid #707f8c;
 }
 
 .formBox input:focus ~ i,
-.formBox textarea:focus ~ i {
+.formBox textarea:focus ~ i,
+.formBox select:focus ~ i {
   color: #bdc5cd;
 }
 
@@ -124,7 +147,7 @@
 .formBox [type='submit'] {
   border: none;
   cursor: pointer;
-  background-color: #707F8C;
+  background-color: #707f8c;
   color: #fff;
   margin-bottom: 0;
   width: 100%;
@@ -149,12 +172,12 @@
   top: 20px;
   right: 4px;
   pointer-events: none;
-  color: #707F8C;
+  color: #707f8c;
 }
 
 .cRed {
   color: red;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .cRedHover:hover {
@@ -168,4 +191,9 @@
 .point-none {
   pointer-events: none;
 }
+
+.pl-13 {
+  padding-left: 13px;
+}
+
 /*# sourceMappingURL=myJobs.css.map */
