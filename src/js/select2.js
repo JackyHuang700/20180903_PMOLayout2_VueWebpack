@@ -2,13 +2,13 @@
 function select2Func(e) {
   var self = e.target;
   var data = e.params.data;
-
+var selfNextSib = self.nextElementSibling.nextElementSibling
   if (data) {
-    self.nextElementSibling.nextElementSibling.classList.remove('d-none');
-    self.nextElementSibling.nextElementSibling.classList.add('d-block');
+    selfNextSib.classList.remove('d-none');
+    selfNextSib.classList.add('d-block');
   } else {
-    self.nextElementSibling.nextElementSibling.classList.remove('d-block');
-    self.nextElementSibling.nextElementSibling.classList.add('d-none');
+    selfNextSib.classList.remove('d-block');
+    selfNextSib.classList.add('d-none');
   }
 }
 //# sourceMappingURL=select2.js.map
