@@ -1,0 +1,143 @@
+.skin-blue .main-header .navbar {
+  background-color: #4d5269;
+}
+
+.skin-blue .main-header .logo {
+  background-color: #454b61;
+  border-bottom-color: #454b61;
+  transition-property: background-color, opacity;
+}
+
+.skin-blue .main-header .logo:hover {
+  opacity: 0.5;
+  background-color: #454b61;
+}
+
+.content-wrapper {
+  background-color: #e0e9ff;
+}
+
+.iconAnim i {
+  color: #dce0e3;
+}
+
+.skin-blue .sidebar a,
+.skin-blue .main-header .navbar .nav > li > a,
+.skin-blue .main-header .navbar .nav > li > a:focus i,
+.skin-blue .sidebar-menu .treeview-menu > li > a:hover,
+.skin-blue .main-header .navbar .sidebar-toggle,
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+  color: #dce0e3;
+}
+
+.skin-blue .main-sidebar,
+.skin-blue .sidebar-menu > li:hover > a {
+  background-color: #626b89;
+}
+
+.skin-blue .sidebar-menu > li.header {
+  background-color: #58607a;
+  color: #dce0e3;
+}
+
+.skin-blue .sidebar-menu > li.menu-open > a {
+  background-color: #626b89;
+}
+
+.skin-blue .sidebar-menu > li > .treeview-menu {
+  background-color: #4d5269;
+  color: #dce0e3;
+}
+
+.skin-blue .sidebar-menu .treeview-menu > li > a:hover,
+.sidebar-menu.sidebar-menu > li:hover > a {
+  border-left-color: #b8c9ff;
+}
+
+.user-menu.user-menu.user-menu.user-menu.user-menu > a,
+.skin-blue .main-header .navbar .nav > li > a,
+.skin-blue .main-header .navbar .sidebar-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.user-menu.user-menu.user-menu.user-menu.user-menu > a::after,
+.skin-blue .main-header .navbar .nav > li > a::after,
+.skin-blue .main-header .navbar .sidebar-toggle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #626b89;
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.user-menu.user-menu.user-menu.user-menu.user-menu > a:hover,
+.skin-blue .main-header .navbar .nav > li > a:hover,
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.user-menu.user-menu.user-menu.user-menu.user-menu > a:hover::after,
+.skin-blue .main-header .navbar .nav > li > a:hover::after,
+.skin-blue .main-header .navbar .sidebar-toggle:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu,
+.user-menu.user-menu.user-menu.user-menu.user-menu {
+  -webkit-animation: dropdownMenu 0.3s ease-in-out;
+  animation: dropdownMenu 0.3s ease-in-out;
+}
+
+@-webkit-keyframes dropdownMenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes dropdownMenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/*# sourceMappingURL=custom2.css.map */

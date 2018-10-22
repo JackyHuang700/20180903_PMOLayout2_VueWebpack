@@ -49,16 +49,6 @@
   top: 48px;
 }
 
-.skin-blue .main-header .navbar .nav .open.open > a,
-.skin-blue .main-header .navbar .nav > li > a:focus {
-  background-color: transparent;
-}
-
-.skin-blue .main-header .navbar .nav .open.open > a i,
-.skin-blue .main-header .navbar .nav > li > a:focus i {
-  color: #73818f;
-}
-
 .user-menu.user-menu.user-menu.user-menu.user-menu {
   padding-right: 20px;
 }
@@ -79,6 +69,7 @@
 }
 
 .navbar-nav > .user-menu .user-image {
+  margin-top: 0;
   margin-right: 0px;
 }
 
@@ -162,6 +153,34 @@
   transition-timing-function: ease-in-out;
 }
 
+.boxStyle {
+  box-shadow: 0 9px 16px rgba(0, 0, 0, 0.3);
+}
+
+.logoImg {
+  width: 160px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  border-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer {
+  border-color: transparent;
+}
+
+.skin-blue .main-header .navbar .nav .open.open > a,
+.skin-blue .main-header .navbar .nav > li > a:focus {
+  background-color: transparent;
+}
+
+.skin-blue .main-header .navbar .nav .open.open > a i,
+.skin-blue .main-header .navbar .nav > li > a:focus i {
+  color: #73818f;
+}
+
 /* 子選單 */
 .skin-blue .sidebar-menu .treeview-menu > li > a:hover {
   border-left: 2px solid #00c0ef;
@@ -172,7 +191,7 @@
 
 .skin-blue .main-header .navbar,
 .skin-blue .main-header .logo {
-  transition-property: background-color;
+  transition-property: background-color, opacity;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
   background-color: #fff;
@@ -208,20 +227,6 @@
   transform: scale(1.3);
 }
 
-.logoImg {
-  width: 160px;
-  height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  border-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.main-footer {
-  border-color: transparent;
-}
-
 .skin-blue .main-sidebar,
 .skin-blue .sidebar-menu > li:hover > a {
   background-color: #324359;
@@ -233,8 +238,28 @@
   background-color: #29384b;
 }
 
-.boxStyle {
-  box-shadow: 0 9px 16px rgba(0, 0, 0, 0.3);
+.navbar-custom-menu .navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.main-header .navbar .nav > li > a,
+.skin-blue .main-header .navbar .sidebar-toggle,
+.main-header .logo {
+  height: 51px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-custom-menu-left {
+    display: inline-block;
+  }
+  .navbar-nav {
+    margin-top: 4.5px;
+    margin-bottom: 0;
+  }
+  .main-header .navbar .nav > li > a {
+    height: auto;
+  }
 }
 
 .content {

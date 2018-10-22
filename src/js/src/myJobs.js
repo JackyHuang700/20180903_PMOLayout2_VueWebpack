@@ -1,4 +1,4 @@
-const responseText = {
+var responseText = {
   data: [
     {
       id: '1',

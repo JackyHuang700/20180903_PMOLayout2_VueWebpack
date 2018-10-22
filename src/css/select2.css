@@ -77,6 +77,7 @@ span.select2-container {
 .select2-selection--multiple
 .select2-selection__choice__remove {
   color: #e66d6d;
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -84,6 +85,7 @@ span.select2-container {
 .select2-selection--multiple
 .select2-selection__choice__remove:hover {
   color: red;
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -130,5 +132,4 @@ span.select2-container {
 .select2-selection__clear:hover {
   opacity: 0.5;
 }
-
 /*# sourceMappingURL=select2.css.map */
